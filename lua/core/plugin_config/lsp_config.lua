@@ -13,43 +13,61 @@ local on_attach = function(_, _)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require("lspconfig").lua_ls.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" }
+      },
+    }
+  },
 }
 
 require("lspconfig").astro.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 require("lspconfig").intelephense.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 require("lspconfig").volar.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 require("lspconfig").tsserver.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 require("lspconfig").jsonls.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 require("lspconfig").html.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 require("lspconfig").emmet_language_server.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 require("lspconfig").yamlls.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
-
 require("lspconfig").marksman.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
