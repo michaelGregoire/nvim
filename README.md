@@ -1,1 +1,1 @@
-# MESSAGE
+# Custom Neovim Config
