@@ -52,6 +52,13 @@ local plugins = {
   'rafamadriz/friendly-snippets',
   'windwp/nvim-autopairs',
   'windwp/nvim-ts-autotag',
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
+    lazy = false,
+  }
 }
 
 local opts = {}
