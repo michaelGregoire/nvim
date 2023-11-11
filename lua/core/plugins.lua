@@ -47,7 +47,13 @@ local plugins = {
   -- Completions
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
-  'L3MON4D3/LuaSnip',
+  {
+    'L3MON4D3/LuaSnip',
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+      "benfowler/telescope-luasnip.nvim",
+    },
+  },
   'saadparwaiz1/cmp_luasnip',
   'rafamadriz/friendly-snippets',
   'windwp/nvim-autopairs',
