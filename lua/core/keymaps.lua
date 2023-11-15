@@ -15,3 +15,4 @@ vim.opt.expandtab = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', 'l', ':Lazy<CR>')
+vim.keymap.set('n', '<leader>?', ':lua vim.diagnostic.open_float()<CR>')
