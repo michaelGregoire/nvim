@@ -7,6 +7,8 @@ vim.opt.laststatus = 2
 vim.opt.autowrite = true
 vim.opt.cursorline = true
 vim.opt.autoread = true
+vim.opt.textwidth = 80
+vim.opt.colorcolumn = "80"
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

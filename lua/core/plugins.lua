@@ -44,6 +44,14 @@ local plugins = {
   -- Tab Bar
   'romgrk/barbar.nvim',
 
+  -- Code folding
+  {
+    'kevinhwang91/nvim-ufo',
+    dependencies = {
+      'kevinhwang91/promise-async'
+    }
+  },
+
   -- Completions
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
