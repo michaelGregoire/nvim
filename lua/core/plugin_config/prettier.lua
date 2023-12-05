@@ -8,6 +8,7 @@ prettier.setup({
     "html",
     "javascript",
     "javascriptreact",
+    "javascript.jsx",
     "json",
     "less",
     "markdown",
@@ -18,5 +19,19 @@ prettier.setup({
     "php",
     "vue",
     "astro",
+  },
+  cli_options = {
+    single_attribute_per_line = true,
+  },
+  ["null-ls"] = {
+    condition = function()
+      return prettier.config_exists({
+        check_package_json = true,
+      })
+    end,
+    runtime_condition = function()
+      return true
+    end,
+    timeout = 5000,
   },
 })
