@@ -12,6 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  {
+    'christoomey/vim-tmux-navigator',
+    lazy = false,
+  },
   'ful1e5/onedark.nvim',
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
@@ -78,7 +82,7 @@ local plugins = {
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
-  },
+  }
 }
 
 local opts = {}
