@@ -16,10 +16,13 @@ local plugins = {
     'christoomey/vim-tmux-navigator',
     lazy = false,
   },
-  'ful1e5/onedark.nvim',
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   'nvim-tree/nvim-tree.lua',
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
   'nvim-tree/nvim-web-devicons',
-  'nvim-lualine/lualine.nvim',
   'nvim-treesitter/nvim-treesitter',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
